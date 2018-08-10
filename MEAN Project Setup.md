@@ -662,6 +662,9 @@ Let's generate the guards:
 + register the guards in `app.module.ts`
 
 ```typescript
+import { RequireAnonGuard } from './guards/require-anon.guard';
+import { RequireUserGuard } from './guards/require-user.guard';
+import { InitAuthGuard } from './guards/init-auth.guard';
 
 const routes: Routes = [
 { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuard ] },
@@ -858,8 +861,6 @@ import { FormsModule } from '@angular/forms';
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service'
-
 
 
 @Component({
