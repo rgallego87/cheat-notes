@@ -474,7 +474,7 @@ export const environment = {
 
 
 
-+ In `auth.services.js`:
++ In `auth.services.ts`:
 
 ```javascript
 
