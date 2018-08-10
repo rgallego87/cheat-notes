@@ -118,7 +118,7 @@ require('dotenv').config();
 mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE,
-    userNewUrlParser: true
+    useNewUrlParser: true
 })
 .then(()=> {
     console.log('connected')
@@ -138,7 +138,7 @@ Now we can call that file in order to establish the connections:
 
 ```javascript 
 
-const mongoose = require ('./database');
+const mongoose = require('./database');
 ```
 
 
