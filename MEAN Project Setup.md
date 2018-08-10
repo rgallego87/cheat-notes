@@ -26,7 +26,7 @@ In our main project folder, we will create two separated parts:
 
 
 
-###Set up for the backend
+### Set up for the backend
 
 First of all, remember to install all the packages included in the `package.json`
 
@@ -36,7 +36,7 @@ First of all, remember to install all the packages included in the `package.json
 
 
 
-####Delete views engine setup
+#### Delete views engine setup
 
 Now we can start modifiying our default `Express.js` installation. As we won't need any rendering service from the Backend part of our aplication, we can delete the default `views engine setup`:
 
@@ -51,7 +51,7 @@ app.set('view engine', 'ejs');
 
 
 
-####Replace error handle
+#### Replace error handle
 
 As we're creating our own API to manage the connexions with the FrontEnd part of our app, we need to change the way the errors are handleded in the Backend **(status + json response!)**. In order to do this, we can Replace the error handle with the following code: 
 
@@ -77,7 +77,7 @@ app.use((err, req, res, next) => {
 
 
 
-####Install `nodemon`
+#### Install `nodemon`
 
 We will now install `nodemon` so we won't need to reset the server every time we make changes: 
 
@@ -95,7 +95,7 @@ To run it, remember to add the following code to be able to run `npm run dev` in
 
  
 
-####Install `mongoose`
+#### Install `mongoose`
 
 We will need to install `mongoose` to manage our conexions with the database: 
 
@@ -143,7 +143,7 @@ const mongoose = require ('./database');
 
 
 
-###Environment variables
+### Environment variables
 
 You have two different environments: dev and production. In order to be able to mantain the connexions in both parts of the application (for example, if we deply to Heroku our app, where the routes will change) we need to establish our defined environment for development in our computers. To do that, we will create environment variables.
 
@@ -179,7 +179,7 @@ mmm... don't remember WTF problem Thor had during the exercise, but you need to 
 
 
 
-###Aditional
+### Aditional
 
 You can delete your `project-folder/server/views` folder, as we won't need any rendering service from the backend!.
 
@@ -339,7 +339,7 @@ const User = mongoose.model('User', userSchema);
 
 ### Configurate the user session
 
-####Add `express-session`
+#### Add `express-session`
 
 Let's install express-session (session middleware for Express) so we can keep track of the user's sessions: 
 
@@ -384,13 +384,13 @@ How is the authentication? We must send the token, check if is right and in that
 
 
 
-##Front-End
+## Front-End
 
 Let's create the Login, Signup and Logout function for our app, connected to what we did in our Backend server.
 
 
 
-###Routing  
+### Routing  
 
 We need to define the routes that will link the routes we created in our API to our Frontend: 
 
@@ -485,7 +485,7 @@ router.get('/me', (req, res, next) => {
 
 
 
-####Configure the environment: 
+#### Configure the environment: 
 
 + in `environment.ts`:
 
@@ -579,7 +579,7 @@ export class AuthService {
 
 
 
-####Observables
+#### Observables
 
 A observable is an object that can emmit other objects. 
 
@@ -836,11 +836,11 @@ app.use(cors({
 }));
 ```
 
-Note: If you are using dotenv module with environtment variables you could change origin to process.env.CORS_URL
+Note: If you are using dotenv module with environment variables you could change origin to `process.env.CORS_URL`
 
 
 
-###Login form
+### Login form
 
 We need to create a form so our users can log into the app!
 
