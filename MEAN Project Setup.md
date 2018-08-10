@@ -836,7 +836,7 @@ app.use(cors({
 }));
 ```
 
-
+Note: If you are using dotenv module with environtment variables you could change origin to process.env.CORS_URL
 
 
 
