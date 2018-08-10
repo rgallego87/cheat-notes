@@ -374,6 +374,16 @@ app.use(session({
 
 
 
+**NOTE**: The session is established between the Angular Server (localhost 4200) and the browser, so, at the moment we cannot connect the session with teh Server API.  Behind the scenes, the browser in establishing an AJAX connection with the Angular Server. 
+
+We can solve this problem by using Tokens. Is an alphanumeric code with a encypted part and a codified part. You ask for the token to the server api and when reciving it, and you store it in the local storage. 
+
+How is the authentication? We must send the token, check if is right and in that case keep working.
+
+**AJAX -> Token -> Server API -> check if it's right**
+
+
+
 ## Front-End
 
 Let's create the Login, Signup and Logout function for our app, connected to what we did in our Backend server.
@@ -410,7 +420,7 @@ imports: [ ..., RouterModule.forRoot(routes), ...]
 
 We are going to create the components: home-page + login-page to be displayed when accesing the created routes in the browser: 
 
-+ in the terminal, route  `project-folder/server:`
++ in the terminal, route  `project-folder/client:`
 
   `$ ng g c pages/login-page`
   `$ ng g c pages/home-page`
@@ -433,7 +443,7 @@ We are going to create the components: home-page + login-page to be displayed wh
 
 We are going to create a service so we can storage our 'connect-with-API' functions in just one place: 
 
-+ in the terminal, route  `project-folder/server:`
++ in the terminal, route  `project-folder/client:`
 
   `$ ng g s services/auth`
 
