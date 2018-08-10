@@ -413,9 +413,9 @@ We are going to create the components: home-page + login-page to be displayed wh
 
 + in the terminal, route  `project-folder/client:`
 
-+ `$ ng g c pages/login-page`
-+ `$ ng g c pages/home-page`
-+ `$ ng g c pages/signup-page`
+  + `$ ng g c pages/login-page`
+  + `$ ng g c pages/home-page`
+  + `$ ng g c pages/signup-page`
 
   
 
