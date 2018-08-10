@@ -460,23 +460,7 @@ import { AuthService } from './services/auth.service';
 ```
 
 
-
-+ in `project-folder/server` in `auth.js` 
-
-```javascript
-
-router.get('/me', (req, res, next) => {
-  if (req.session.currentUser) {
-    res.json(req.session.currentUser);
-  } else {
-    res.status(404).json({code: 'not-found'});
-  }
-});
-```
-
-
-
-#### Configure the environment: 
+#### Configurate the environment: 
 
 + in `environment.ts`:
 
